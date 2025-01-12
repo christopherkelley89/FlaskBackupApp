@@ -26,17 +26,18 @@
  
 ## Installation
 ### Prerequisites
-Ensure you have Python 3.x installed. You will also need access to a Backblaze B2 bucket.
+= Ensure you have Python 3.x installed. You will also need access to a Backblaze B2 bucket.
 
 ## Steps
 - Clone the repository and navigate to the project directory.
 ### Create a virtual environment
+#### Linux
 ```
 bash
 python -m venv venv
  source venv/bin/activate 
 ```
-#### For Windows: 
+#### For Windows 
 ```
 venv\Scripts\activate
 ```
@@ -45,7 +46,7 @@ venv\Scripts\activate
 bash
 pip install -r requirements.txt
 ```
-## Set up your Backblaze B2 credentials in app/__init__.py:
+## Set up your Backblaze B2 credentials in app/__init__.py
 python
 ```
 app.config.from_mapping(
@@ -60,7 +61,7 @@ app.config.from_mapping(
 bash
 python run.py
 ```
-## Start the application:
+## Start the application
 ```
 bash
 python run.py
