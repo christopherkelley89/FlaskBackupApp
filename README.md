@@ -1,7 +1,7 @@
 # FlaskBackupApp
-Basic Flask Backup app
-Overview
-The Flask Backup Application is designed to manage and automate backup jobs. It features a simple web interface for creating and managing backup tasks, storing them in a database, and uploading files to Backblaze B2 cloud storage.
+
+## Overview
+- The Flask Backup Application is designed to manage and automate backup jobs. It features a simple web interface for creating and managing backup tasks, storing them in a database, and uploading files to Backblaze B2 cloud storage.
 
 ## Features
 - Backup Management: Create, view, and delete backup jobs through a web interface.
