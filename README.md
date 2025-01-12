@@ -42,12 +42,14 @@ pip install -r requirements.txt
 
 ## Set up your Backblaze B2 credentials in app/__init__.py:
 python
+```
 app.config.from_mapping(
     B2_BUCKET_NAME='your-bucket-name',
     B2_ACCESS_KEY_ID='your-access-key-id',
     B2_SECRET_ACCESS_KEY='your-secret-access-key',
     B2_ENDPOINT_URL='your-endpoint-url'
 )
+```
 Initialize the database:
 bash
 Copy code
