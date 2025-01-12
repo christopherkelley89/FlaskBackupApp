@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  flask-app:
+    image: flask-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: production
+      B2_BUCKET_NAME: your-bucket-name
+      B2_ACCESS_KEY_ID: your-access-key-id
+      B2_SECRET_ACCESS_KEY: your-secret-access-key
+      B2_ENDPOINT_URL: https://s3.us-west-002.backblazeb2.com
+    volumes:
+      - ./data:/app/data  # Volume to persist the SQLite database and other data
+    restart: unless-stopped
+
+volumes:
+  data:
+    driver: local
