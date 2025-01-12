@@ -11,7 +11,7 @@ The Flask Backup Application is designed to manage and automate backup jobs. It 
 - RESTful API Endpoints: Access and manage backup jobs programmatically.
 
 ## Project Structure
-
+'''
 ├── app/
 │   ├── __init__.py        # App initialization and configuration
 │   ├── models.py          # Database models
@@ -22,7 +22,7 @@ The Flask Backup Application is designed to manage and automate backup jobs. It 
 │   └── index.html         # Frontend interface
 ├── requirements.txt       # Project dependencies
 ├── run.py                 # Entry point for running the application
-
+'''
 ## Installation
 ### Prerequisites
 Ensure you have Python 3.x installed. You will also need access to a Backblaze B2 bucket.
