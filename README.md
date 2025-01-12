@@ -26,7 +26,7 @@
  
 ## Installation
 ### Prerequisites
-= Ensure you have Python 3.x installed. You will also need access to a Backblaze B2 bucket.
+Ensure you have Python 3.x installed. You will also need access to a Backblaze B2 bucket.
 
 ## Steps
 - Clone the repository and navigate to the project directory.
