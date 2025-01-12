@@ -85,7 +85,7 @@ gunicorn -w 4 run:app
 ```
 
 ## Dependencies 
-Flask
-Flask-SQLAlchemy
-Flask-WTF
-boto3
+- Flask
+- Flask-SQLAlchemy
+- Flask-WTF
+- boto3
