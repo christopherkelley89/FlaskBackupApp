@@ -50,9 +50,8 @@ app.config.from_mapping(
     B2_ENDPOINT_URL='your-endpoint-url'
 )
 ```
-Initialize the database:
+## Initialize the database:
 bash
-Copy code
 python run.py
 Usage
 Start the application:
