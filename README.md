@@ -89,3 +89,58 @@ gunicorn -w 4 run:app
 - Flask-SQLAlchemy
 - Flask-WTF
 - boto3
+# Docker
+- Testing using Docker Compose 
+- Create the Docker Compose File Ensure the compose.yml file is present in the root of the project. Here's a sample structure:
+
+## yaml
+```
+version: "3.8"
+
+services:
+  flask-app:
+    image: flask-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: production
+      B2_BUCKET_NAME: your-bucket-name
+      B2_ACCESS_KEY_ID: your-access-key-id
+      B2_SECRET_ACCESS_KEY: your-secret-access-key
+      B2_ENDPOINT_URL: https://s3.us-west-002.backblazeb2.com
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
+volumes:
+  data:
+    driver: local
+```
+- Create the Dockerfile Ensure the Dockerfile is present in the project root. Example:
+
+## dockerfile
+```
+FROM python:3.9-slim
+WORKDIR /app
+COPY . /app
+RUN pip install --no-cache-dir -r requirements.txt
+EXPOSE 5000
+CMD ["python", "run.py"]
+```
+- Build and Run the Containers Run the following command to build the Docker image and start the containers:
+
+```
+bash
+docker-compose up --build
+```
+- Access the Flask App Once the container is running, open your browser and navigate to:
+http://localhost:5000
+
+## Environment Variables 
+- Replace the placeholder values in the docker-compose.yml file under the environment section with your actual Backblaze B2 bucket credentials.
+- Persistent Data The SQLite database and other data are stored in the data folder. This folder is mapped as a volume to persist data even when the container is restarted.
+
+
